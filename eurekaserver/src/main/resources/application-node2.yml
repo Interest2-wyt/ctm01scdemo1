@@ -1,0 +1,19 @@
+server:
+  port: 17003
+eureka:
+  instance:
+    hostname: server2
+  client:
+    service-url:
+      defaultZone: http://server1:17002/eureka/
+spring:
+  security:
+    user:
+      name: root
+      password: 123456
+  application:
+    name: eurekanode
+
+
+
+

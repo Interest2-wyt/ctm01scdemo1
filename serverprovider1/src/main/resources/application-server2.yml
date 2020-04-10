@@ -1,0 +1,14 @@
+server:
+  port: 17012
+  servlet:
+    context-path: /ctm01scdemo1/serverprovider1
+spring:
+  application:
+    name: provider1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@192.168.1.167:17001/eureka/
+    healthcheck:
+      enabled: true

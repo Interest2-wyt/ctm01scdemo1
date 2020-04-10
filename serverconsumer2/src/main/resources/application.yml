@@ -1,0 +1,18 @@
+server:
+  port: 17022
+  servlet:
+    context-path: /ctm01scdemo1/serverconsumer2
+spring:
+  application:
+    name: consumer2
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@192.168.1.167:17001/eureka/
+    healthcheck:
+      enabled: true
+
+provider1:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.wangyongtao.serverconsumer2.ribbon.MyRule

@@ -1,0 +1,33 @@
+package com.wangyongtao.serverconsumer4.serverconsumer4.config;
+
+import com.netflix.hystrix.HystrixCommand;
+import com.netflix.hystrix.HystrixCommandGroupKey;
+
+/**
+ * @Author : wangyongtao
+ * @Description : 自定义hystrix
+ * @Date : 2020/4/6 0006 21:06
+ **/
+public class MyHystrixCommand extends HystrixCommand<String> {
+    private String name;
+
+    public MyHystrixCommand(String name) {
+        super(HystrixCommandGroupKey.Factory.asKey("MyGroup"));
+        this.name = name;
+    }
+
+    @Override
+    protected String run() throws Exception {
+        try {
+            Thread.sleep(10*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return this.name + ":" + Thread.currentThread().getName();
+    }
+
+    @Override
+    protected String getFallback() {
+        return "失败了，这是回退方法返回信息！";
+    }
+}

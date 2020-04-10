@@ -1,0 +1,20 @@
+server:
+  port: 17023
+  servlet:
+    context-path: /ctm01scdemo1/serverconsumer3
+spring:
+  application:
+    name: consumer3
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@192.168.1.167:17001/eureka/
+    healthcheck:
+      enabled: true
+logging:
+  level:
+    com:
+      wangyongtao:
+        serverconsumer3feign:
+          serverconsumer3: DEBUG
