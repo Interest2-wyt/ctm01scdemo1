@@ -8,10 +8,10 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.wangyongtao.serverconsumer3-feign</groupId>
-    <artifactId>serverconsumer3</artifactId>
+    <groupId>com.wyt.zuulserver</groupId>
+    <artifactId>zuulserver</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>serverconsumer3-feign</name>
+    <name>zuulserver</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -54,31 +54,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--actuator监控-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
 
-        <!--spring cloud: eureka client-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
-        <!--spring cloud：feign -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
-            <version>1.4.5.RELEASE</version>
-        </dependency>
-
-        <!--spring cloud: ribbon -->
-        <!--<dependency>-->
-        <!--<groupId>com.netflix.ribbon</groupId>-->
-        <!--<artifactId>ribbon</artifactId>-->
-        <!--<version>2.2.5</version>-->
-        <!--</dependency>-->
 
     </dependencies>
 

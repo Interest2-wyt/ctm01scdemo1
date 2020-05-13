@@ -30,7 +30,7 @@ public class WebControl {
 
     @GetMapping("/getString")
     public String getString(){
-        return "success";
+        return "success devtool";
     }
 
 }

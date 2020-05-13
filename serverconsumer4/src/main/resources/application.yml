@@ -5,6 +5,9 @@ server:
 spring:
   application:
     name: consumer4
+  devtools:
+    restart:
+      enabled: true
 
 eureka:
   client:
@@ -12,3 +15,20 @@ eureka:
       defaultZone: http://root:123456@192.168.1.167:17001/eureka/
     healthcheck:
       enabled: true
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+turbine:
+  app-config: consumer4
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+  instanceUrlSuffix: /ctm01scdemo1/serverconsumer4/actuator/hystrix.stream
+
+

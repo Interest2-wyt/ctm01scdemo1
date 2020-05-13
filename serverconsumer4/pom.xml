@@ -5,7 +5,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
+        <version>2.2.5.RELEASE</version>
+        <!--<version>1.5.12.RELEASE</version>-->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.wangyongtao.serverconsumer4</groupId>
@@ -16,7 +17,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+        <spring-cloud.version>Hoxton.SR4</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -24,7 +25,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
 
@@ -54,10 +54,29 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--actuator监控-->
+        <!--actuator监控 + netflix-hystrix + starter-netflix-hystrix-dashboard -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.netflix.hystrix</groupId>-->
+            <!--<artifactId>hystrix-javanica</artifactId>-->
+            <!--<version>RELEASE</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-netflix-hystrix-dashboard</artifactId>-->
+        <!--</dependency>-->
+        <!-- spring cloud : dashboard -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        </dependency>
+        <!-- spring cloud : turbine -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
         </dependency>
 
         <!--spring cloud: eureka client-->
@@ -73,19 +92,19 @@
             <version>1.4.5.RELEASE</version>
         </dependency>
 
+        <!-- hystrix -->
+        <!--<dependency>-->
+            <!--<groupId>com.netflix.hystrix</groupId>-->
+            <!--<artifactId>hystrix-core</artifactId>-->
+            <!--<version>1.5.12</version>-->
+        <!--</dependency>-->
+
         <!--spring cloud: hystrix-->
         <dependency>
-            <groupId>com.netflix.hystrix</groupId>
-            <artifactId>hystrix-core</artifactId>
-            <version>1.5.12</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
 
-        <!--spring cloud: ribbon -->
-        <!--<dependency>-->
-        <!--<groupId>com.netflix.ribbon</groupId>-->
-        <!--<artifactId>ribbon</artifactId>-->
-        <!--<version>2.2.5</version>-->
-        <!--</dependency>-->
 
     </dependencies>
 

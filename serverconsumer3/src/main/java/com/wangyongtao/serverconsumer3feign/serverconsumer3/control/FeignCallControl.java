@@ -32,6 +32,9 @@ public class FeignCallControl {
         return "restTemplate调用结果："+result;
     }
 
+    /**
+     * feign调用
+     */
     @GetMapping("/callHello2")
     public String callHello2(){
         String result = provider1CallFeign.callHello();
