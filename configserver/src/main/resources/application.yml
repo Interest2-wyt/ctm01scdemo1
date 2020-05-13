@@ -1,0 +1,23 @@
+server:
+  port: 17041
+  servlet:
+    context-path: /ctm01scdemo1/configserver
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Interest2-wyt/scdemo1configserver.git
+          password: Interest2-wyt
+          username: Wyt14705193725
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://root:123456@192.168.1.167:17001/eureka/
+#    healthcheck:
+#      enabled: true
+
+

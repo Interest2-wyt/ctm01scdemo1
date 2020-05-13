@@ -1,0 +1,20 @@
+server:
+  port: 17031
+  servlet:
+    context-path: /ctm01scdemo1/zuulserver
+spring:
+  application:
+    name: zuulserver
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://root:123456@192.168.1.167:17001/eureka/
+#    healthcheck:
+#      enabled: true
+
+zuul:
+  routes:
+    test01:
+      path: /webControl/getString/**
+      url: forward:/zuulRoute/getString
